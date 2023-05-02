@@ -26,15 +26,13 @@ spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
-  {{- if .Values.ingress.tls }}
+  {{- if .Values.ingress.tls.enabled }}
   tls:
-    {{- range .Values.ingress.tls }}
     - hosts:
-        {{- range .hosts }}
-        - {{ . | quote }}
+        {{- range .Values.ingress.hosts }}
+        - {{ .host | quote }}
         {{- end }}
-      secretName: {{ .secretName }}
-    {{- end }}
+      secretName: {{ $fullName }}
   {{- end }}
   rules:
     {{- range .Values.ingress.hosts }}
@@ -49,7 +47,7 @@ spec:
             backend:
               {{- if semverCompare ">=1.19-0" $.Capabilities.KubeVersion.GitVersion }}
               service:
-                name: {{ $fullName }}
+                name: app-{{ $fullName }}
                 port:
                   number: {{ $svcPort }}
               {{- else }}
