@@ -8,7 +8,12 @@ entries:
     digest: 50d6a55745c876999eaf7f0481aa3eb402247b0e4da8ca8ce64896acfa694fda
     name: yopass
     type: application
+    keywords:
+      - yopass
+      - secrets
+      - sharing
+      - encrypted
     urls:
-    - https://github.com/rovangju/helm-yopass/releases/download/yopass-0.1.0-alpha3/yopass-0.1.0-alpha3.tgz
+      - https://github.com/rovangju/helm-yopass/releases/download/yopass-0.1.0-alpha3/yopass-0.1.0-alpha3.tgz
     version: 0.1.0-alpha3
 generated: "2023-05-02T12:56:48.0704-05:00"
