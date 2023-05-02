@@ -1,8 +1,0 @@
-apiVersion: v2
-name: yopass
-description: Yopass secure secret sharing application
-type: application
-
-version: 0.1.0-alpha3
-
-appVersion: "11.5.0"
