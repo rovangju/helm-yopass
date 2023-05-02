@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  yopass:
+  - apiVersion: v2
+    appVersion: 11.5.0
+    created: "2023-05-02T12:40:10.76987-05:00"
+    description: Yopass secure secret sharing application
+    digest: 50d6a55745c876999eaf7f0481aa3eb402247b0e4da8ca8ce64896acfa694fda
+    name: yopass
+    type: application
+    urls:
+    - https://github.com/rovangju/helm-yopass/releases/download/yopass-0.1.0-alpha3/yopass-0.1.0-alpha3.tgz
+    version: 0.1.0-alpha3
+generated: "2023-05-02T12:40:10.769886-05:00"
